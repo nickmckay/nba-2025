@@ -1,6 +1,9 @@
 name: Update NBA Standings
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     # Run at 6 AM ET (11 AM UTC) every day
     - cron: '0 11 * * *'
