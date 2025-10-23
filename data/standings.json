@@ -1,0 +1,74 @@
+{
+  "last_updated": "2025-10-23",
+  "season": "2024-25",
+  "players": {
+    "Dad": {
+      "teams": ["Magic", "Pistons", "Pacers", "Suns", "Jazz"],
+      "wins": 0,
+      "losses": 0,
+      "earnings": 0.00
+    },
+    "Tyler": {
+      "teams": ["Heat", "Thunder", "Bucks", "Raptors", "Nets"],
+      "wins": 0,
+      "losses": 0,
+      "earnings": 0.00
+    },
+    "Ethan": {
+      "teams": ["76ers", "Mavericks", "Grizzlies", "Hawks", "Celtics"],
+      "wins": 0,
+      "losses": 0,
+      "earnings": 0.00
+    },
+    "Landon": {
+      "teams": ["Trail Blazers", "Clippers", "Wizards", "Knicks", "Lakers"],
+      "wins": 0,
+      "losses": 0,
+      "earnings": 0.00
+    },
+    "Mom": {
+      "teams": ["Rockets", "Nuggets", "Spurs", "Kings", "Bulls"],
+      "wins": 0,
+      "losses": 0,
+      "earnings": 0.00
+    },
+    "Micah": {
+      "teams": ["Timberwolves", "Warriors", "Cavaliers", "Hornets", "Pelicans"],
+      "wins": 0,
+      "losses": 0,
+      "earnings": 0.00
+    }
+  },
+  "team_records": {
+    "Magic": {"wins": 0, "losses": 0},
+    "Pistons": {"wins": 0, "losses": 0},
+    "Pacers": {"wins": 0, "losses": 0},
+    "Suns": {"wins": 0, "losses": 0},
+    "Jazz": {"wins": 0, "losses": 0},
+    "Heat": {"wins": 0, "losses": 0},
+    "Thunder": {"wins": 0, "losses": 0},
+    "Bucks": {"wins": 0, "losses": 0},
+    "Raptors": {"wins": 0, "losses": 0},
+    "Nets": {"wins": 0, "losses": 0},
+    "76ers": {"wins": 0, "losses": 0},
+    "Mavericks": {"wins": 0, "losses": 0},
+    "Grizzlies": {"wins": 0, "losses": 0},
+    "Hawks": {"wins": 0, "losses": 0},
+    "Celtics": {"wins": 0, "losses": 0},
+    "Trail Blazers": {"wins": 0, "losses": 0},
+    "Clippers": {"wins": 0, "losses": 0},
+    "Wizards": {"wins": 0, "losses": 0},
+    "Knicks": {"wins": 0, "losses": 0},
+    "Lakers": {"wins": 0, "losses": 0},
+    "Rockets": {"wins": 0, "losses": 0},
+    "Nuggets": {"wins": 0, "losses": 0},
+    "Spurs": {"wins": 0, "losses": 0},
+    "Kings": {"wins": 0, "losses": 0},
+    "Bulls": {"wins": 0, "losses": 0},
+    "Timberwolves": {"wins": 0, "losses": 0},
+    "Warriors": {"wins": 0, "losses": 0},
+    "Cavaliers": {"wins": 0, "losses": 0},
+    "Hornets": {"wins": 0, "losses": 0},
+    "Pelicans": {"wins": 0, "losses": 0}
+  }
+}
