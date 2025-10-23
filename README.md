@@ -1,4 +1,4 @@
-# NBA Betting Pool 2024-25
+# NBA Betting Pool 2025-26
 
 A simple website to track an NBA betting pool where 6 players have 5 teams each, earning $0.25 per win and losing $0.25 per loss.
 

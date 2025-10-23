@@ -1,3 +1,37 @@
+// Team ID mapping for ESPN logo URLs
+const TEAM_LOGOS = {
+    'Magic': 'https://a.espncdn.com/i/teamlogos/nba/500/orl.png',
+    'Pistons': 'https://a.espncdn.com/i/teamlogos/nba/500/det.png',
+    'Pacers': 'https://a.espncdn.com/i/teamlogos/nba/500/ind.png',
+    'Suns': 'https://a.espncdn.com/i/teamlogos/nba/500/phx.png',
+    'Jazz': 'https://a.espncdn.com/i/teamlogos/nba/500/utah.png',
+    'Heat': 'https://a.espncdn.com/i/teamlogos/nba/500/mia.png',
+    'Thunder': 'https://a.espncdn.com/i/teamlogos/nba/500/okc.png',
+    'Bucks': 'https://a.espncdn.com/i/teamlogos/nba/500/mil.png',
+    'Raptors': 'https://a.espncdn.com/i/teamlogos/nba/500/tor.png',
+    'Nets': 'https://a.espncdn.com/i/teamlogos/nba/500/bkn.png',
+    '76ers': 'https://a.espncdn.com/i/teamlogos/nba/500/phi.png',
+    'Mavericks': 'https://a.espncdn.com/i/teamlogos/nba/500/dal.png',
+    'Grizzlies': 'https://a.espncdn.com/i/teamlogos/nba/500/mem.png',
+    'Hawks': 'https://a.espncdn.com/i/teamlogos/nba/500/atl.png',
+    'Celtics': 'https://a.espncdn.com/i/teamlogos/nba/500/bos.png',
+    'Trail Blazers': 'https://a.espncdn.com/i/teamlogos/nba/500/por.png',
+    'Clippers': 'https://a.espncdn.com/i/teamlogos/nba/500/lac.png',
+    'Wizards': 'https://a.espncdn.com/i/teamlogos/nba/500/wsh.png',
+    'Knicks': 'https://a.espncdn.com/i/teamlogos/nba/500/ny.png',
+    'Lakers': 'https://a.espncdn.com/i/teamlogos/nba/500/lal.png',
+    'Rockets': 'https://a.espncdn.com/i/teamlogos/nba/500/hou.png',
+    'Nuggets': 'https://a.espncdn.com/i/teamlogos/nba/500/den.png',
+    'Spurs': 'https://a.espncdn.com/i/teamlogos/nba/500/sa.png',
+    'Kings': 'https://a.espncdn.com/i/teamlogos/nba/500/sac.png',
+    'Bulls': 'https://a.espncdn.com/i/teamlogos/nba/500/chi.png',
+    'Timberwolves': 'https://a.espncdn.com/i/teamlogos/nba/500/min.png',
+    'Warriors': 'https://a.espncdn.com/i/teamlogos/nba/500/gs.png',
+    'Cavaliers': 'https://a.espncdn.com/i/teamlogos/nba/500/cle.png',
+    'Hornets': 'https://a.espncdn.com/i/teamlogos/nba/500/cha.png',
+    'Pelicans': 'https://a.espncdn.com/i/teamlogos/nba/500/no.png'
+};
+
 // Load and display NBA betting pool data
 async function loadStandings() {
     try {
@@ -104,9 +138,13 @@ function displayPlayerDetails(players, teamRecords) {
 
         player.teams.forEach(team => {
             const record = teamRecords[team];
+            const logoUrl = TEAM_LOGOS[team];
             html += `
                 <li class="team-item">
-                    <span class="team-name">${team}</span>
+                    <div class="team-info">
+                        <img src="${logoUrl}" alt="${team}" class="team-logo" />
+                        <span class="team-name">${team}</span>
+                    </div>
                     <span class="team-record">${record.wins}-${record.losses}</span>
                 </li>
             `;

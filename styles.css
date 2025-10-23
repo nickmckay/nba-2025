@@ -201,6 +201,18 @@ h2 {
     align-items: center;
 }
 
+.team-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 .team-name {
     font-weight: 500;
 }
