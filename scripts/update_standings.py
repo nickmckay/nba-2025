@@ -1,144 +1,127 @@
 #!/usr/bin/env python3
 """
 NBA Betting Pool Standings Updater
-Fetches NBA game results and updates player standings.
+Fetches NBA standings from ESPN and updates player standings.
 """
 
 import json
 import os
-from datetime import datetime, timedelta
-from nba_api.stats.endpoints import scoreboardv2
-from nba_api.stats.static import teams
+import time
+from datetime import datetime
+import requests
 
-# Team name mappings (NBA API names to our display names)
-TEAM_NAME_MAP = {
-    'Orlando Magic': 'Magic',
-    'Detroit Pistons': 'Pistons',
-    'Indiana Pacers': 'Pacers',
-    'Phoenix Suns': 'Suns',
-    'Utah Jazz': 'Jazz',
-    'Miami Heat': 'Heat',
-    'Oklahoma City Thunder': 'Thunder',
-    'Milwaukee Bucks': 'Bucks',
-    'Toronto Raptors': 'Raptors',
-    'Brooklyn Nets': 'Nets',
-    'Philadelphia 76ers': '76ers',
-    'Dallas Mavericks': 'Mavericks',
-    'Memphis Grizzlies': 'Grizzlies',
-    'Atlanta Hawks': 'Hawks',
-    'Boston Celtics': 'Celtics',
-    'Portland Trail Blazers': 'Trail Blazers',
-    'LA Clippers': 'Clippers',
-    'Washington Wizards': 'Wizards',
-    'New York Knicks': 'Knicks',
-    'Los Angeles Lakers': 'Lakers',
-    'Houston Rockets': 'Rockets',
-    'Denver Nuggets': 'Nuggets',
-    'San Antonio Spurs': 'Spurs',
-    'Sacramento Kings': 'Kings',
-    'Chicago Bulls': 'Bulls',
-    'Minnesota Timberwolves': 'Timberwolves',
-    'Golden State Warriors': 'Warriors',
-    'Cleveland Cavaliers': 'Cavaliers',
-    'Charlotte Hornets': 'Hornets',
-    'New Orleans Pelicans': 'Pelicans'
+# Team name mappings (ESPN team abbreviations to our display names)
+ESPN_TEAM_MAP = {
+    'ORL': 'Magic',
+    'DET': 'Pistons',
+    'IND': 'Pacers',
+    'PHX': 'Suns',
+    'UTAH': 'Jazz',
+    'MIA': 'Heat',
+    'OKC': 'Thunder',
+    'MIL': 'Bucks',
+    'TOR': 'Raptors',
+    'BKN': 'Nets',
+    'PHI': '76ers',
+    'DAL': 'Mavericks',
+    'MEM': 'Grizzlies',
+    'ATL': 'Hawks',
+    'BOS': 'Celtics',
+    'POR': 'Trail Blazers',
+    'LAC': 'Clippers',
+    'WSH': 'Wizards',
+    'NY': 'Knicks',
+    'LAL': 'Lakers',
+    'HOU': 'Rockets',
+    'DEN': 'Nuggets',
+    'SA': 'Spurs',
+    'SAC': 'Kings',
+    'CHI': 'Bulls',
+    'MIN': 'Timberwolves',
+    'GS': 'Warriors',
+    'CLE': 'Cavaliers',
+    'CHA': 'Hornets',
+    'NO': 'Pelicans'
 }
 
-# Reverse mapping for lookup
-REVERSE_TEAM_MAP = {v: k for k, v in TEAM_NAME_MAP.items()}
+def get_team_standings_espn(max_retries=3):
+    """Get current NBA team standings from ESPN API."""
+    # Use 2026 for the 2025-26 season
+    url = "https://site.web.api.espn.com/apis/v2/sports/basketball/nba/standings?season=2026"
 
-def get_nba_team_id(team_name):
-    """Get NBA team ID from team name."""
-    all_teams = teams.get_teams()
-    full_name = REVERSE_TEAM_MAP.get(team_name)
-    if not full_name:
-        return None
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    }
 
-    for team in all_teams:
-        if team['full_name'] == full_name:
-            return team['id']
+    for attempt in range(max_retries):
+        try:
+            print(f"Fetching standings from ESPN (attempt {attempt + 1}/{max_retries})...")
+            response = requests.get(url, headers=headers, timeout=30)
+            response.raise_for_status()
+
+            data = response.json()
+            team_records = {}
+
+            # ESPN API structure: children contains conferences (Eastern/Western)
+            if 'children' in data and len(data['children']) > 0:
+                for conference in data['children']:
+                    if 'standings' in conference and 'entries' in conference['standings']:
+                        standings = conference['standings']['entries']
+
+                        for entry in standings:
+                            team = entry['team']
+                            stats = entry['stats']
+
+                            # Get team abbreviation
+                            abbrev = team['abbreviation']
+                            display_name = ESPN_TEAM_MAP.get(abbrev)
+
+                            if display_name:
+                                # Find wins and losses in stats
+                                wins = 0
+                                losses = 0
+
+                                for stat in stats:
+                                    if stat['name'] == 'wins':
+                                        wins = int(stat['value'])
+                                    elif stat['name'] == 'losses':
+                                        losses = int(stat['value'])
+
+                                team_records[display_name] = {
+                                    'wins': wins,
+                                    'losses': losses
+                                }
+
+            if len(team_records) == 30:
+                print(f"Successfully fetched standings for {len(team_records)} teams")
+                return team_records
+            else:
+                print(f"Warning: Only found {len(team_records)} teams")
+                if len(team_records) > 0:
+                    return team_records
+
+        except requests.exceptions.Timeout:
+            print(f"Timeout on attempt {attempt + 1}")
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt)  # Exponential backoff
+        except requests.exceptions.RequestException as e:
+            print(f"Request error on attempt {attempt + 1}: {e}")
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt)
+        except Exception as e:
+            print(f"Unexpected error: {e}")
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt)
+
     return None
-
-def get_games_for_date(date):
-    """Fetch games for a specific date."""
-    try:
-        scoreboard = scoreboardv2.ScoreboardV2(game_date=date.strftime('%Y-%m-%d'))
-        games_df = scoreboard.game_header.get_data_frame()
-        return games_df
-    except Exception as e:
-        print(f"Error fetching games for {date}: {e}")
-        return None
-
-def parse_games(games_df):
-    """Parse games dataframe and return list of results."""
-    if games_df is None or games_df.empty:
-        return []
-
-    results = []
-    all_teams = teams.get_teams()
-    team_id_to_name = {team['id']: team['full_name'] for team in all_teams}
-
-    for _, game in games_df.iterrows():
-        home_team_id = game['HOME_TEAM_ID']
-        visitor_team_id = game['VISITOR_TEAM_ID']
-
-        home_team_name = team_id_to_name.get(home_team_id, 'Unknown')
-        visitor_team_name = team_id_to_name.get(visitor_team_id, 'Unknown')
-
-        # Map to our display names
-        home_team = TEAM_NAME_MAP.get(home_team_name)
-        visitor_team = TEAM_NAME_MAP.get(visitor_team_name)
-
-        if not home_team or not visitor_team:
-            continue
-
-        # Determine winner (game must be final)
-        game_status = game.get('GAME_STATUS_TEXT', '')
-        if 'Final' not in game_status:
-            continue
-
-        # Parse scores from the line score
-        # The game_header doesn't have scores, we need to check if game is finished
-        # For simplicity, we'll use the standings endpoint instead
-        continue
-
-    return results
-
-def get_team_standings():
-    """Get current NBA team standings."""
-    from nba_api.stats.endpoints import leaguestandings
-
-    try:
-        standings = leaguestandings.LeagueStandings()
-        standings_df = standings.get_data_frames()[0]
-
-        team_records = {}
-        all_teams = teams.get_teams()
-        team_id_to_name = {team['id']: team['full_name'] for team in all_teams}
-
-        for _, row in standings_df.iterrows():
-            team_id = row['TeamID']
-            full_name = team_id_to_name.get(team_id)
-            display_name = TEAM_NAME_MAP.get(full_name)
-
-            if display_name:
-                team_records[display_name] = {
-                    'wins': int(row['WINS']),
-                    'losses': int(row['LOSSES'])
-                }
-
-        return team_records
-    except Exception as e:
-        print(f"Error fetching standings: {e}")
-        return None
 
 def update_standings_file():
     """Update the standings JSON file."""
-    # Get current standings from NBA API
-    new_team_records = get_team_standings()
+    # Get current standings from ESPN
+    new_team_records = get_team_standings_espn()
 
     if not new_team_records:
-        print("Failed to fetch team standings")
+        print("Failed to fetch team standings after all retries")
         return False
 
     # Load current data
@@ -194,10 +177,13 @@ def update_standings_file():
     with open(data_file, 'w') as f:
         json.dump(data, f, indent=2)
 
-    print(f"Updated standings successfully")
+    print(f"\n✓ Updated standings successfully")
     print(f"Teams with changes: {len(changes)}")
-    for team, change in changes.items():
-        print(f"  {team}: +{change['wins']}W, +{change['losses']}L")
+    if changes:
+        for team, change in changes.items():
+            print(f"  {team}: +{change['wins']}W, +{change['losses']}L")
+    else:
+        print("  No games played since last update")
 
     return True
 
