@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-30",
+  "last_updated": "2025-10-31",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -10,9 +10,9 @@
         "Suns",
         "Jazz"
       ],
-      "wins": 7,
+      "wins": 8,
       "losses": 16,
-      "earnings": -2.25
+      "earnings": -2.0
     },
     "Tyler": {
       "teams": [
@@ -22,9 +22,9 @@
         "Raptors",
         "Nets"
       ],
-      "wins": 12,
-      "losses": 11,
-      "earnings": 0.25
+      "wins": 14,
+      "losses": 12,
+      "earnings": 0.5
     },
     "Ethan": {
       "teams": [
@@ -47,8 +47,8 @@
         "Lakers"
       ],
       "wins": 11,
-      "losses": 11,
-      "earnings": 0.0
+      "losses": 12,
+      "earnings": -0.25
     },
     "Mom": {
       "teams": [
@@ -58,9 +58,9 @@
         "Kings",
         "Bulls"
       ],
-      "wins": 14,
+      "wins": 15,
       "losses": 7,
-      "earnings": 1.75
+      "earnings": 2.0
     },
     "Micah": {
       "teams": [
@@ -71,8 +71,8 @@
         "Pelicans"
       ],
       "wins": 11,
-      "losses": 12,
-      "earnings": -0.25
+      "losses": 14,
+      "earnings": -0.75
     }
   },
   "team_records": {
@@ -88,15 +88,19 @@
       "wins": 1,
       "losses": 4
     },
-    "Magic": {
+    "Wizards": {
       "wins": 1,
       "losses": 4
     },
-    "Wizards": {
-      "wins": 1,
-      "losses": 3
+    "Magic": {
+      "wins": 2,
+      "losses": 4
     },
     "Hawks": {
+      "wins": 2,
+      "losses": 3
+    },
+    "Hornets": {
       "wins": 2,
       "losses": 3
     },
@@ -108,8 +112,8 @@
       "wins": 2,
       "losses": 2
     },
-    "Hornets": {
-      "wins": 2,
+    "Heat": {
+      "wins": 3,
       "losses": 2
     },
     "Cavaliers": {
@@ -120,12 +124,8 @@
       "wins": 3,
       "losses": 2
     },
-    "Heat": {
-      "wins": 3,
-      "losses": 1
-    },
     "Bucks": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1
     },
     "Bulls": {
@@ -186,14 +186,14 @@
     },
     "Warriors": {
       "wins": 4,
-      "losses": 1
+      "losses": 2
     },
     "Spurs": {
-      "wins": 4,
+      "wins": 5,
       "losses": 0
     },
     "Thunder": {
-      "wins": 5,
+      "wins": 6,
       "losses": 0
     }
   }
