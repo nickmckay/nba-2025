@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-04",
+  "last_updated": "2025-11-05",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -11,8 +11,8 @@
         "Jazz"
       ],
       "wins": 15,
-      "losses": 20,
-      "earnings": -1.25
+      "losses": 22,
+      "earnings": -1.75
     },
     "Tyler": {
       "teams": [
@@ -22,9 +22,9 @@
         "Raptors",
         "Nets"
       ],
-      "wins": 19,
-      "losses": 16,
-      "earnings": 0.75
+      "wins": 21,
+      "losses": 17,
+      "earnings": 1.0
     },
     "Ethan": {
       "teams": [
@@ -34,8 +34,8 @@
         "Hawks",
         "Celtics"
       ],
-      "wins": 16,
-      "losses": 20,
+      "wins": 17,
+      "losses": 21,
       "earnings": -1.0
     },
     "Landon": {
@@ -47,8 +47,8 @@
         "Lakers"
       ],
       "wins": 18,
-      "losses": 17,
-      "earnings": 0.25
+      "losses": 18,
+      "earnings": 0.0
     },
     "Mom": {
       "teams": [
@@ -58,9 +58,9 @@
         "Kings",
         "Bulls"
       ],
-      "wins": 20,
+      "wins": 21,
       "losses": 11,
-      "earnings": 2.25
+      "earnings": 2.5
     },
     "Micah": {
       "teams": [
@@ -70,9 +70,9 @@
         "Hornets",
         "Pelicans"
       ],
-      "wins": 15,
-      "losses": 19,
-      "earnings": -1.0
+      "wins": 17,
+      "losses": 20,
+      "earnings": -0.75
     }
   },
   "team_records": {
@@ -88,24 +88,24 @@
       "wins": 1,
       "losses": 6
     },
+    "Magic": {
+      "wins": 3,
+      "losses": 5
+    },
     "Celtics": {
       "wins": 3,
       "losses": 5
     },
-    "Raptors": {
+    "Hornets": {
       "wins": 3,
+      "losses": 5
+    },
+    "Raptors": {
+      "wins": 4,
       "losses": 4
     },
     "Hawks": {
-      "wins": 3,
-      "losses": 4
-    },
-    "Magic": {
-      "wins": 3,
-      "losses": 4
-    },
-    "Hornets": {
-      "wins": 3,
+      "wins": 4,
       "losses": 4
     },
     "Heat": {
@@ -122,22 +122,22 @@
     },
     "Bucks": {
       "wins": 5,
+      "losses": 3
+    },
+    "76ers": {
+      "wins": 5,
       "losses": 2
     },
     "Pistons": {
       "wins": 5,
       "losses": 2
     },
-    "76ers": {
-      "wins": 5,
-      "losses": 1
-    },
     "Bulls": {
-      "wins": 5,
+      "wins": 6,
       "losses": 1
     },
     "Pelicans": {
-      "wins": 0,
+      "wins": 1,
       "losses": 6
     },
     "Kings": {
@@ -154,7 +154,7 @@
     },
     "Suns": {
       "wins": 3,
-      "losses": 4
+      "losses": 5
     },
     "Jazz": {
       "wins": 3,
@@ -162,17 +162,13 @@
     },
     "Clippers": {
       "wins": 3,
-      "losses": 3
+      "losses": 4
     },
     "Timberwolves": {
       "wins": 4,
       "losses": 3
     },
     "Trail Blazers": {
-      "wins": 4,
-      "losses": 3
-    },
-    "Warriors": {
       "wins": 4,
       "losses": 3
     },
@@ -184,6 +180,10 @@
       "wins": 4,
       "losses": 2
     },
+    "Warriors": {
+      "wins": 5,
+      "losses": 3
+    },
     "Spurs": {
       "wins": 5,
       "losses": 1
@@ -193,7 +193,7 @@
       "losses": 2
     },
     "Thunder": {
-      "wins": 7,
+      "wins": 8,
       "losses": 0
     }
   }
