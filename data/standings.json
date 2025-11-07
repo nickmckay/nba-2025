@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-06",
+  "last_updated": "2025-11-07",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -10,9 +10,9 @@
         "Suns",
         "Jazz"
       ],
-      "wins": 16,
+      "wins": 17,
       "losses": 24,
-      "earnings": -2.0
+      "earnings": -1.75
     },
     "Tyler": {
       "teams": [
@@ -47,8 +47,8 @@
         "Lakers"
       ],
       "wins": 21,
-      "losses": 19,
-      "earnings": 0.5
+      "losses": 20,
+      "earnings": 0.25
     },
     "Mom": {
       "teams": [
@@ -148,10 +148,6 @@
       "wins": 3,
       "losses": 6
     },
-    "Suns": {
-      "wins": 3,
-      "losses": 5
-    },
     "Kings": {
       "wins": 3,
       "losses": 5
@@ -162,7 +158,11 @@
     },
     "Clippers": {
       "wins": 3,
-      "losses": 4
+      "losses": 5
+    },
+    "Suns": {
+      "wins": 4,
+      "losses": 5
     },
     "Timberwolves": {
       "wins": 4,
