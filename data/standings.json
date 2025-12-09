@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-08",
+  "last_updated": "2025-12-09",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -10,9 +10,9 @@
         "Suns",
         "Jazz"
       ],
-      "wins": 59,
+      "wins": 61,
       "losses": 58,
-      "earnings": 0.25
+      "earnings": 0.75
     },
     "Tyler": {
       "teams": [
@@ -58,8 +58,8 @@
         "Kings",
         "Bulls"
       ],
-      "wins": 62,
-      "losses": 50,
+      "wins": 63,
+      "losses": 51,
       "earnings": 3.0
     },
     "Micah": {
@@ -71,8 +71,8 @@
         "Pelicans"
       ],
       "wins": 52,
-      "losses": 69,
-      "earnings": -4.25
+      "losses": 71,
+      "earnings": -4.75
     }
   },
   "team_records": {
@@ -81,7 +81,7 @@
       "losses": 19
     },
     "Pacers": {
-      "wins": 5,
+      "wins": 6,
       "losses": 18
     },
     "Nets": {
@@ -138,15 +138,15 @@
     },
     "Pelicans": {
       "wins": 3,
-      "losses": 21
+      "losses": 22
+    },
+    "Kings": {
+      "wins": 6,
+      "losses": 18
     },
     "Clippers": {
       "wins": 6,
       "losses": 18
-    },
-    "Kings": {
-      "wins": 6,
-      "losses": 17
     },
     "Mavericks": {
       "wins": 9,
@@ -169,20 +169,20 @@
       "losses": 12
     },
     "Suns": {
-      "wins": 13,
+      "wins": 14,
       "losses": 10
     },
     "Timberwolves": {
       "wins": 15,
-      "losses": 8
-    },
-    "Spurs": {
-      "wins": 15,
-      "losses": 7
+      "losses": 9
     },
     "Rockets": {
       "wins": 15,
       "losses": 6
+    },
+    "Spurs": {
+      "wins": 16,
+      "losses": 7
     },
     "Lakers": {
       "wins": 17,
