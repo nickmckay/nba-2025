@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-10",
+  "last_updated": "2025-12-11",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -11,8 +11,8 @@
         "Jazz"
       ],
       "wins": 62,
-      "losses": 58,
-      "earnings": 1.0
+      "losses": 59,
+      "earnings": 0.75
     },
     "Tyler": {
       "teams": [
@@ -22,9 +22,9 @@
         "Raptors",
         "Nets"
       ],
-      "wins": 68,
+      "wins": 69,
       "losses": 55,
-      "earnings": 3.25
+      "earnings": 3.5
     },
     "Ethan": {
       "teams": [
@@ -170,7 +170,7 @@
     },
     "Suns": {
       "wins": 14,
-      "losses": 10
+      "losses": 11
     },
     "Timberwolves": {
       "wins": 15,
@@ -193,7 +193,7 @@
       "losses": 6
     },
     "Thunder": {
-      "wins": 23,
+      "wins": 24,
       "losses": 1
     }
   }
