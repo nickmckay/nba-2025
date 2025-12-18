@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-17",
+  "last_updated": "2025-12-18",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -34,9 +34,9 @@
         "Hawks",
         "Celtics"
       ],
-      "wins": 66,
+      "wins": 67,
       "losses": 65,
-      "earnings": 0.25
+      "earnings": 0.5
     },
     "Landon": {
       "teams": [
@@ -58,9 +58,9 @@
         "Kings",
         "Bulls"
       ],
-      "wins": 69,
+      "wins": 70,
       "losses": 55,
-      "earnings": 3.5
+      "earnings": 3.75
     },
     "Micah": {
       "teams": [
@@ -71,8 +71,8 @@
         "Pelicans"
       ],
       "wins": 58,
-      "losses": 75,
-      "earnings": -4.25
+      "losses": 77,
+      "earnings": -4.75
     }
   },
   "team_records": {
@@ -97,20 +97,20 @@
       "losses": 16
     },
     "Bulls": {
-      "wins": 10,
+      "wins": 11,
       "losses": 15
     },
     "Heat": {
       "wins": 14,
       "losses": 12
     },
+    "Cavaliers": {
+      "wins": 15,
+      "losses": 13
+    },
     "76ers": {
       "wins": 14,
       "losses": 11
-    },
-    "Cavaliers": {
-      "wins": 15,
-      "losses": 12
     },
     "Hawks": {
       "wins": 15,
@@ -160,11 +160,11 @@
       "wins": 10,
       "losses": 15
     },
-    "Grizzlies": {
-      "wins": 12,
+    "Warriors": {
+      "wins": 13,
       "losses": 14
     },
-    "Warriors": {
+    "Grizzlies": {
       "wins": 13,
       "losses": 14
     },
@@ -174,7 +174,7 @@
     },
     "Timberwolves": {
       "wins": 17,
-      "losses": 9
+      "losses": 10
     },
     "Rockets": {
       "wins": 16,
