@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-08",
+  "last_updated": "2026-01-09",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -10,9 +10,9 @@
         "Suns",
         "Jazz"
       ],
-      "wins": 89,
+      "wins": 91,
       "losses": 96,
-      "earnings": -1.75
+      "earnings": -1.25
     },
     "Tyler": {
       "teams": [
@@ -35,8 +35,8 @@
         "Celtics"
       ],
       "wins": 91,
-      "losses": 93,
-      "earnings": -0.5
+      "losses": 94,
+      "earnings": -0.75
     },
     "Landon": {
       "teams": [
@@ -70,27 +70,27 @@
         "Hornets",
         "Pelicans"
       ],
-      "wins": 86,
-      "losses": 103,
-      "earnings": -4.25
+      "wins": 87,
+      "losses": 105,
+      "earnings": -4.5
     }
   },
   "team_records": {
     "Pacers": {
-      "wins": 6,
+      "wins": 7,
       "losses": 31
     },
     "Wizards": {
       "wins": 10,
       "losses": 26
     },
+    "Hornets": {
+      "wins": 13,
+      "losses": 25
+    },
     "Nets": {
       "wins": 11,
       "losses": 23
-    },
-    "Hornets": {
-      "wins": 13,
-      "losses": 24
     },
     "Bucks": {
       "wins": 16,
@@ -108,11 +108,11 @@
       "wins": 20,
       "losses": 17
     },
-    "Magic": {
-      "wins": 21,
-      "losses": 17
-    },
     "Cavaliers": {
+      "wins": 21,
+      "losses": 18
+    },
+    "Magic": {
       "wins": 21,
       "losses": 17
     },
@@ -145,15 +145,15 @@
       "losses": 29
     },
     "Jazz": {
-      "wins": 12,
+      "wins": 13,
+      "losses": 24
+    },
+    "Mavericks": {
+      "wins": 14,
       "losses": 24
     },
     "Clippers": {
       "wins": 13,
-      "losses": 23
-    },
-    "Mavericks": {
-      "wins": 14,
       "losses": 23
     },
     "Grizzlies": {
@@ -181,7 +181,7 @@
       "losses": 12
     },
     "Timberwolves": {
-      "wins": 24,
+      "wins": 25,
       "losses": 13
     },
     "Nuggets": {
