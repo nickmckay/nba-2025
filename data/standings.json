@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-23",
+  "last_updated": "2026-02-24",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -11,8 +11,8 @@
         "Jazz"
       ],
       "wins": 138,
-      "losses": 146,
-      "earnings": -2.0
+      "losses": 148,
+      "earnings": -2.5
     },
     "Tyler": {
       "teams": [
@@ -35,8 +35,8 @@
         "Celtics"
       ],
       "wins": 137,
-      "losses": 146,
-      "earnings": -2.25
+      "losses": 147,
+      "earnings": -2.5
     },
     "Landon": {
       "teams": [
@@ -58,9 +58,9 @@
         "Kings",
         "Bulls"
       ],
-      "wins": 146,
+      "wins": 149,
       "losses": 139,
-      "earnings": 1.75
+      "earnings": 2.5
     },
     "Micah": {
       "teams": [
@@ -134,10 +134,10 @@
     },
     "Pistons": {
       "wins": 42,
-      "losses": 13
+      "losses": 14
     },
     "Kings": {
-      "wins": 12,
+      "wins": 13,
       "losses": 46
     },
     "Pelicans": {
@@ -146,7 +146,7 @@
     },
     "Jazz": {
       "wins": 18,
-      "losses": 39
+      "losses": 40
     },
     "Mavericks": {
       "wins": 20,
@@ -154,7 +154,7 @@
     },
     "Grizzlies": {
       "wins": 21,
-      "losses": 34
+      "losses": 35
     },
     "Clippers": {
       "wins": 27,
@@ -181,7 +181,7 @@
       "losses": 23
     },
     "Rockets": {
-      "wins": 34,
+      "wins": 35,
       "losses": 21
     },
     "Nuggets": {
@@ -189,7 +189,7 @@
       "losses": 22
     },
     "Spurs": {
-      "wins": 40,
+      "wins": 41,
       "losses": 16
     },
     "Thunder": {
