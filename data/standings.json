@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-04",
+  "last_updated": "2026-04-05",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -10,9 +10,9 @@
         "Suns",
         "Jazz"
       ],
-      "wins": 178,
+      "wins": 179,
       "losses": 208,
-      "earnings": -7.5
+      "earnings": -7.25
     },
     "Tyler": {
       "teams": [
@@ -22,9 +22,9 @@
         "Raptors",
         "Nets"
       ],
-      "wins": 192,
+      "wins": 193,
       "losses": 193,
-      "earnings": -0.25
+      "earnings": 0.0
     },
     "Ethan": {
       "teams": [
@@ -35,8 +35,8 @@
         "Celtics"
       ],
       "wins": 189,
-      "losses": 197,
-      "earnings": -2.0
+      "losses": 198,
+      "earnings": -2.25
     },
     "Landon": {
       "teams": [
@@ -47,8 +47,8 @@
         "Lakers"
       ],
       "wins": 196,
-      "losses": 190,
-      "earnings": 1.5
+      "losses": 191,
+      "earnings": 1.25
     },
     "Mom": {
       "teams": [
@@ -58,8 +58,8 @@
         "Kings",
         "Bulls"
       ],
-      "wins": 206,
-      "losses": 180,
+      "wins": 207,
+      "losses": 181,
       "earnings": 6.5
     },
     "Micah": {
@@ -77,7 +77,7 @@
   },
   "team_records": {
     "Pistons": {
-      "wins": 56,
+      "wins": 57,
       "losses": 21
     },
     "Cavaliers": {
@@ -94,7 +94,7 @@
     },
     "Wizards": {
       "wins": 17,
-      "losses": 59
+      "losses": 60
     },
     "Pacers": {
       "wins": 18,
@@ -113,7 +113,7 @@
       "losses": 47
     },
     "Heat": {
-      "wins": 40,
+      "wins": 41,
       "losses": 37
     },
     "Magic": {
@@ -126,7 +126,7 @@
     },
     "76ers": {
       "wins": 43,
-      "losses": 34
+      "losses": 35
     },
     "Raptors": {
       "wins": 43,
@@ -142,7 +142,7 @@
     },
     "Spurs": {
       "wins": 59,
-      "losses": 18
+      "losses": 19
     },
     "Thunder": {
       "wins": 61,
@@ -153,7 +153,7 @@
       "losses": 29
     },
     "Nuggets": {
-      "wins": 49,
+      "wins": 50,
       "losses": 28
     },
     "Warriors": {
