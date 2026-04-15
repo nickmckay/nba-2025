@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-14",
+  "last_updated": "2026-04-15",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -144,6 +144,10 @@
       "wins": 62,
       "losses": 20
     },
+    "Trail Blazers": {
+      "wins": 42,
+      "losses": 40
+    },
     "Timberwolves": {
       "wins": 49,
       "losses": 33
@@ -159,10 +163,6 @@
     "Warriors": {
       "wins": 37,
       "losses": 45
-    },
-    "Trail Blazers": {
-      "wins": 42,
-      "losses": 40
     },
     "Clippers": {
       "wins": 42,
