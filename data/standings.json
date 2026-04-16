@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-15",
+  "last_updated": "2026-04-16",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -88,6 +88,10 @@
       "wins": 56,
       "losses": 26
     },
+    "76ers": {
+      "wins": 45,
+      "losses": 37
+    },
     "Raptors": {
       "wins": 46,
       "losses": 36
@@ -107,10 +111,6 @@
     "Hornets": {
       "wins": 44,
       "losses": 38
-    },
-    "76ers": {
-      "wins": 45,
-      "losses": 37
     },
     "Magic": {
       "wins": 45,
