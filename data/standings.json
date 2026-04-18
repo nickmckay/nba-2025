@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-17",
+  "last_updated": "2026-04-18",
   "season": "2025-26",
   "players": {
     "Dad": {
@@ -92,6 +92,10 @@
       "wins": 45,
       "losses": 37
     },
+    "Magic": {
+      "wins": 45,
+      "losses": 37
+    },
     "Raptors": {
       "wins": 46,
       "losses": 36
@@ -111,10 +115,6 @@
     "Hornets": {
       "wins": 44,
       "losses": 38
-    },
-    "Magic": {
-      "wins": 45,
-      "losses": 37
     },
     "Wizards": {
       "wins": 17,
@@ -148,6 +148,10 @@
       "wins": 42,
       "losses": 40
     },
+    "Suns": {
+      "wins": 45,
+      "losses": 37
+    },
     "Timberwolves": {
       "wins": 49,
       "losses": 33
@@ -167,10 +171,6 @@
     "Clippers": {
       "wins": 42,
       "losses": 40
-    },
-    "Suns": {
-      "wins": 45,
-      "losses": 37
     },
     "Kings": {
       "wins": 22,
